@@ -1,0 +1,65 @@
+:root {
+  --theme-color: #285685;
+  --font-color: #ffc765;
+}
+
+body {
+  background-color: black;
+  font-family: VT323, monospace;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.textCont {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 10% 5%;
+  width: 80%;
+  text-align: center;
+}
+
+.textCont::after {
+  content: "|";
+  animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
+  0%, 50% {
+    opacity: 1;
+  }
+  49.9%, 100% {
+    opacity: 0;
+  }
+}
+
+.giftContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.giftAnimation {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.giftLink {
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 1.2em;
+  border: 2px solid var(--font-color);
+  padding: 10px 20px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.giftLink:hover {
+  color: var(--theme-color);
+  border-color: var(--theme-color);
+}
